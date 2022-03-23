@@ -1,0 +1,85 @@
+CREATE TABLE Employee (
+EmployeeID int NOT NULL PRIMARY KEY,
+FirstName varchar(50),
+LastName varchar(50),
+Age int,
+Gender varchar(50)
+)
+
+CREATE TABLE Salary(
+SalaryID int NOT NULL PRIMARY KEY,
+Job varchar(50),
+SalarySize int
+)
+
+INSERT INTO Employee VALUES 
+(1, 'Matko', 'Potalec', 25, 'Male'),
+(2, 'Magdalena', 'Cavic', 25, 'Female'),
+(3, 'Ciri', 'Luna', 3, 'Female'),
+(4, 'Marijana', 'Karan', 34, 'Female'),
+(5, 'Ema', 'Karan', 6, 'Female'),
+(6, 'Marijo', 'Potalec', 33, 'Male')
+
+INSERT INTO Salary VALUES
+(1, 'Web developer', 7000),
+(2, 'Kindergarten teacher', 15000),
+(3, 'Cats', 0),
+(4, 'Teacher', 17000),
+(5, 'Student', 10),
+(6, 'Electrician', 20000)
+
+SELECT *
+FROM Employee
+LEFT JOIN Salary
+ON Employee.EmployeeID = Salary.SalaryID
+
+INSERT INTO Employee (EmployeeID, FirstName, LastName, Age, Gender)
+VALUES (7, 'Anto', 'Antic', 17, 'Male')
+
+UPDATE Employee
+SET LastName = 'Ivic', Gender= 'Female'
+WHERE EmployeeID = 7;
+
+--SELECT *
+--FROM Employee
+--LEFT OUTTER JOIN Salary
+--ON Employee.EmployeeID = Salary.SalaryID
+
+--SELECT FirstName, Gender 
+--FROM Employee 
+
+--SELECT top 5*
+--FROM Employee 
+
+--SELECT DISTINCT Gender
+--FROM Employee 
+
+--SELECT MAX(Salary)
+--FROM Salary 
+
+--SELECT AVG(Salary)
+--FROM Salary 
+
+--SELECT *
+--FROM Employee
+--WHERE FirstName = 'Matko'
+
+--SELECT *
+--FROM Employee
+--WHERE Age > 20
+
+--SELECT *
+--FROM Employee
+--WHERE Age > 10 AND Gender = 'Male'
+
+--SELECT *
+--FROM Employee
+--WHERE LastName LIKE 'P%o%' 
+
+--SELECT *
+--FROM Employee
+--WHERE FirstName IN ('Matko', 'Ema')
+
+--SELECT Gender, COUNT (Gender)
+--FROM Employee 
+--GROUP BY Gender
