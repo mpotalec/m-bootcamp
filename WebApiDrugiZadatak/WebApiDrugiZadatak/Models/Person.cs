@@ -5,11 +5,10 @@ using System.Web;
 
 namespace WebApiDrugiZadatak.Models
 {
-    public class Student
+    public class Person
     {
-        public string PlaceOfResidence { get; set; } = "";
-        public string Subject { get; set; } = "";
+        public string FirstName { get; set; } = "";
+        public string LastName { get; set; } = "";
         public int Id { get; set; } = 0;
-
     }
 }
