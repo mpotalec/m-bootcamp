@@ -8,7 +8,7 @@ namespace WebApiDrugiZadatak.Models
     public class Student
     {
         public string PlaceOfResidence { get; set; } = "";
-        public string Subject { get; set; } = "";
+        public string SubjectOfStudent { get; set; } = "";
         public int Id { get; set; } = 0;
 
     }

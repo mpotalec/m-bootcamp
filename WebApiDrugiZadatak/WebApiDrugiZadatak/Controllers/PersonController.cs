@@ -1,70 +1,113 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.SqlClient;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using WebApiDrugiZadatak.Models;
+using WebApiDrugiZadatak.Model;
+using WebApiDrugiZadatak.Service;
+using Person = WebApiDrugiZadatak.Model.Person;
+
+
+
 
 namespace WebApiDrugiZadatak.Controllers
 {
     public class PersonController : ApiController
     {
-        List<Person> personList = new List<Person>()
-        {
-            new Person(){ FirstName = "Matko", LastName = "Potalec", Id = 1},
-            new Person(){ FirstName = "Magdalena", LastName = "Cavic", Id = 2},
-            new Person(){ FirstName = "Ciri", LastName = "Luna", Id = 3}
-        };
 
         [HttpGet]
-        public HttpResponseMessage Gets() //call all persons
+        [Route("api/ShowAllPeople")]
+        public HttpResponseMessage ShowAllPeople()
         {
-            if(personList.Count == 0)
+            PersonService service = new PersonService();
+            List<Person> personList = new List<Person>();
+
+            personList = service.ShowAllPeople();
+
+            if (personList != null)
             {
-                return Request.CreateResponse(HttpStatusCode.BadRequest, "Not found");
+                return Request.CreateResponse(HttpStatusCode.OK, personList);
             }
-            return Request.CreateResponse(HttpStatusCode.OK, personList);
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound, $"Not found");
+            }
         }
 
-        
-        public HttpResponseMessage Get(int id)  //find person by id
-        {
-            var idPerson = personList.Find(x => x.Id == id);
-            if (idPerson == null)
-            {
-                Request.CreateResponse(HttpStatusCode.BadRequest, "0 found");
-            }
-            return Request.CreateResponse(HttpStatusCode.OK, idPerson);
-        }
+
+
 
         [HttpPost]
-        public void CreateNewStudent(Person idPerson)
+        [Route("api/InsertPerson")]
+        public HttpResponseMessage InsertPerson(Person person)
         {
-            if(idPerson == null) { return; }
-            if(personList.Count==0)
+            PersonService service = new PersonService();
+            Person newPerson = new Person();
+
+            newPerson = service.InsertPerson(person);
+
+            PersonRest personRest = new PersonRest();
+            personRest.FirstName = newPerson.FirstName;
+            personRest.Id = newPerson.Id;
+
+            return Request.CreateResponse(HttpStatusCode.OK, personRest);
+        }
+
+
+        [HttpPut]
+        [Route("api/UpdatePerson")]
+        public HttpResponseMessage UpdatePersonById(int id, string personName)
+        {
+            PersonService service = new PersonService();
+            Person newPerson = new Person();
+            newPerson = service.UpdatePersonById(id, personName);
+            if (newPerson != null)
             {
-                idPerson.Id = 1;
-            } else { idPerson.Id = personList.Last().Id + 1; }
-            personList.Add(idPerson);
+                PersonRest personMapped = new PersonRest();
+                personMapped.FirstName = newPerson.FirstName;
+                personMapped.Id = newPerson.Id;
+
+                return Request.CreateResponse(HttpStatusCode.OK, personMapped);
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, $"Not found");
+            }
         }
-        // DELETE api/person/delete/1
+
+
         [HttpDelete]
-        [Route("api/person/delete/{id}")]
-        public HttpResponseMessage DeletePersonById(int id)
+        [Route("api/Delete")]
+        public HttpResponseMessage DeleteById(int id)
         {
-            var delPerson = personList.Find(x => x.Id == id);
+            PersonService service = new PersonService();
+            Model.Person newPerson = new Model.Person();
+            newPerson = service.DeletePerson(id);
+            if (newPerson != null)
+            {
+                PersonRest personMapped = new PersonRest();
+                personMapped.FirstName = newPerson.FirstName;
+                personMapped.Id = newPerson.Id;
 
-            if (delPerson == null)
-            { Request.CreateResponse(HttpStatusCode.BadRequest, $"Person {id} not found"); }
-
-            personList.Remove(delPerson);
-
-            return Request.CreateResponse(HttpStatusCode.OK);
+                return Request.CreateResponse(HttpStatusCode.OK, personMapped);
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound, $"Not foud");
+            }
         }
-
     }
 }
+
+public class PersonRest
+{
+    public string FirstName { get; set; } = "";
+    public int Id { get; set; } = 0;
+}
+
 
 
 

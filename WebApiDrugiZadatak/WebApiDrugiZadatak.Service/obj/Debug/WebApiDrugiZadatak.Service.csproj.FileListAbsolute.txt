@@ -1,0 +1,11 @@
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Service\bin\Debug\WebApiDrugiZadatak.Service.dll
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Service\bin\Debug\WebApiDrugiZadatak.Service.pdb
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Service\bin\Debug\WebApiDrugiZad.Repository.dll
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Service\bin\Debug\WebApiDrugiZadatak.Model.dll
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Service\bin\Debug\WebApiDrugiZad.Repository.pdb
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Service\bin\Debug\WebApiDrugiZadatak.Model.pdb
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Service\obj\Debug\WebApiDrugiZadatak.Service.csproj.AssemblyReference.cache
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Service\obj\Debug\WebApiDrugiZadatak.Service.csproj.CoreCompileInputs.cache
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Service\obj\Debug\WebApiDrugiZadatak.Service.csproj.CopyComplete
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Service\obj\Debug\WebApiDrugiZadatak.Service.dll
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Service\obj\Debug\WebApiDrugiZadatak.Service.pdb

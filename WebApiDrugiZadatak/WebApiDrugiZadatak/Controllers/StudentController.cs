@@ -1,71 +1,118 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.SqlClient;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using WebApiDrugiZadatak.Models;
+using WebApiDrugiZadatak.Model;
+using WebApiDrugiZadatak.Service;
+using Student = WebApiDrugiZadatak.Model.Student;
 
 namespace WebApiDrugiZadatak.Controllers
 {
     public class StudentController : ApiController
     {
-        List<Student> studentList = new List<Student>()
-        {
-            new Student(){ PlaceOfResidence = "Osijek", Subject = "Biology", Id = 1},
-            new Student(){ PlaceOfResidence = "Zagreb", Subject = "Math", Id = 2},
-            new Student(){ PlaceOfResidence = "Orahovica", Subject = "Physical Ed.", Id = 3},
-
-        };
 
         [HttpGet]
-        public HttpResponseMessage Gets() //call all students
+        [Route("api/ShowAllStudents")]
+        public HttpResponseMessage ShowAllStudents()
         {
-            if (studentList.Count == 0)
+            StudentService service = new StudentService();
+            List<Student> studentList = new List<Student>();
+
+            studentList = service.ShowAllStudents();
+
+            if (studentList != null)
             {
-                return Request.CreateResponse(HttpStatusCode.BadRequest, "Not found");
+                //List<StudentModel> studentsMapped = new List<StudentModel>();
+                //foreach (StudentModel student in studentList)
+                //{
+                //    StudentRest studentRest = new StudentRest();
+                //    studentRest.SubjectOfStudent = student.SubjectOfStudent;
+                //    studentRest.Id = student.Id;
+
+                //    studentsMapped.Add(studentRest);
+                //}
+                return Request.CreateResponse(HttpStatusCode.OK, studentList);
             }
-            return Request.CreateResponse(HttpStatusCode.OK, studentList);
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound, $"Not found");
+            }
         }
 
 
-        public HttpResponseMessage Get(int id)  //find student by id
-        {
-            var idStudent = studentList.Find(x => x.Id == id);
-            if (idStudent == null)
-            {
-                Request.CreateResponse(HttpStatusCode.BadRequest, "0 found");
-            }
-            return Request.CreateResponse(HttpStatusCode.OK, idStudent);
-        }
+
 
         [HttpPost]
-        public void CreateNewStudent(Student idStudent)
+        [Route("api/InsertStudent")]
+        public HttpResponseMessage InsertStudent(Model.Student student)
         {
-            if (idStudent == null) { return; }
-            if (studentList.Count == 0)
+            StudentService service = new StudentService();
+            Student newStudent = new Student();
+
+            newStudent = service.InsertStudent(student);
+
+            StudentRest studentRest = new StudentRest();
+            studentRest.SubjectOfStudent = newStudent.SubjectOfStudent;
+            studentRest.Id = newStudent.Id;
+
+            return Request.CreateResponse(HttpStatusCode.OK, studentRest);
+        }
+
+
+        [HttpPut]
+        [Route("api/UpdateStudent")]
+        public HttpResponseMessage UpdateStudentById(int id, string studentName)
+        {
+            StudentService service = new StudentService();
+            Student newStudent = new Student();
+            newStudent = service.UpdateStudentById(id, studentName);
+            if(newStudent != null)
             {
-                idStudent.Id = 1;
+                StudentRest studentMapped = new StudentRest();
+                studentMapped.SubjectOfStudent = newStudent.SubjectOfStudent;
+                studentMapped.Id = newStudent.Id;
+
+                return Request.CreateResponse(HttpStatusCode.OK, studentMapped);
+            }   else
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, $"Not found");
             }
-            else { idStudent.Id = studentList.Last().Id + 1; }
-            studentList.Add(idStudent);
         }
 
 
-        // DELETE api/student/delete/1
         [HttpDelete]
-        [Route("api/student/delete/{id}")]
-        public HttpResponseMessage DeleteStudentById(int id)
+        [Route("api/Delete")]
+        public HttpResponseMessage DeleteById(int id)
         {
-            var delStudent = studentList.Find(x => x.Id == id);
+            StudentService service = new StudentService();
+            Model.Student newStudent = new Model.Student();
+            newStudent = service.DeleteById(id);
+            if(newStudent != null )
+            {
+                StudentRest studentMapped = new StudentRest();
+                studentMapped.SubjectOfStudent = newStudent.SubjectOfStudent;
+                studentMapped.Id = newStudent.Id;
 
-            if (delStudent == null)
-            { Request.CreateResponse(HttpStatusCode.BadRequest, $"Student {id} not found"); }
-
-            studentList.Remove(delStudent);
-
-            return Request.CreateResponse(HttpStatusCode.OK);
+                return Request.CreateResponse(HttpStatusCode.OK, studentMapped);
+            }   else
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound, $"Not foud");
+            }
         }
-
     }
 }
+
+public class StudentRest
+{
+    public string SubjectOfStudent { get; set; } = "";
+    public int Id { get; set; } = 0;
+}
+
+
+
+
+

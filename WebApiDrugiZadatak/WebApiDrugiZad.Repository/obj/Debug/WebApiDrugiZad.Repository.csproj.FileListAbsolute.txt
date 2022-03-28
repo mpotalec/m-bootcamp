@@ -1,0 +1,9 @@
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZad.Repository\bin\Debug\WebApiDrugiZad.Repository.dll
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZad.Repository\bin\Debug\WebApiDrugiZad.Repository.pdb
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZad.Repository\bin\Debug\WebApiDrugiZadatak.Model.dll
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZad.Repository\bin\Debug\WebApiDrugiZadatak.Model.pdb
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZad.Repository\obj\Debug\WebApiDrugiZad.Repository.csproj.AssemblyReference.cache
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZad.Repository\obj\Debug\WebApiDrugiZad.Repository.csproj.CoreCompileInputs.cache
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZad.Repository\obj\Debug\WebApiDrugiZad.Repository.csproj.CopyComplete
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZad.Repository\obj\Debug\WebApiDrugiZad.Repository.dll
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZad.Repository\obj\Debug\WebApiDrugiZad.Repository.pdb

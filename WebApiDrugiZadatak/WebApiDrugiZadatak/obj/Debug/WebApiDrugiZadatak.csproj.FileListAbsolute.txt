@@ -83,3 +83,9 @@ C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak\obj\Debug\WebA
 C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak\obj\Debug\WebApiDrugiZadatak.csproj.CopyComplete
 C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak\obj\Debug\WebApiDrugiZadatak.dll
 C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak\obj\Debug\WebApiDrugiZadatak.pdb
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak\bin\WebApiDrugiZadatak.Model.dll
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak\bin\WebApiDrugiZadatak.Model.pdb
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak\bin\WebApiDrugiZadatak.Service.dll
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak\bin\WebApiDrugiZad.Repository.dll
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak\bin\WebApiDrugiZadatak.Service.pdb
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak\bin\WebApiDrugiZad.Repository.pdb

@@ -1,0 +1,6 @@
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Model\bin\Debug\WebApiDrugiZadatak.Model.dll
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Model\bin\Debug\WebApiDrugiZadatak.Model.pdb
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Model\obj\Debug\WebApiDrugiZadatak.Model.csproj.AssemblyReference.cache
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Model\obj\Debug\WebApiDrugiZadatak.Model.csproj.CoreCompileInputs.cache
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Model\obj\Debug\WebApiDrugiZadatak.Model.dll
+C:\Users\mcavi\source\repos\WebApiDrugiZadatak\WebApiDrugiZadatak.Model\obj\Debug\WebApiDrugiZadatak.Model.pdb
