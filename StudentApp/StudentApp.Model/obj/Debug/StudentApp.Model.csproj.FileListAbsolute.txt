@@ -1,0 +1,6 @@
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Model\bin\Debug\StudentApp.Model.dll
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Model\bin\Debug\StudentApp.Model.pdb
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Model\obj\Debug\StudentApp.Model.csproj.AssemblyReference.cache
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Model\obj\Debug\StudentApp.Model.csproj.CoreCompileInputs.cache
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Model\obj\Debug\StudentApp.Model.dll
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Model\obj\Debug\StudentApp.Model.pdb

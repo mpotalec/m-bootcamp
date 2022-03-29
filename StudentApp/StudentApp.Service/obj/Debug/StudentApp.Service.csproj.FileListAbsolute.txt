@@ -1,0 +1,11 @@
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Service\bin\Debug\StudentApp.Service.dll
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Service\bin\Debug\StudentApp.Service.pdb
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Service\bin\Debug\StudentApp.Model.dll
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Service\bin\Debug\StudentApp.Repository.dll
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Service\bin\Debug\StudentApp.Model.pdb
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Service\bin\Debug\StudentApp.Repository.pdb
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Service\obj\Debug\StudentApp.Service.csproj.AssemblyReference.cache
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Service\obj\Debug\StudentApp.Service.csproj.CoreCompileInputs.cache
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Service\obj\Debug\StudentApp.Service.csproj.CopyComplete
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Service\obj\Debug\StudentApp.Service.dll
+C:\Users\mcavi\source\repos\StudentApp\StudentApp.Service\obj\Debug\StudentApp.Service.pdb
