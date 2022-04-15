@@ -11,8 +11,6 @@ class AppClass extends React.Component{
                 <li><a href="https://www.Orahovica.hr" target="_blank">Official website</a></li>
                 <li><a href="./About.html" target="_blank">About</a></li>
                 <li><a href="#Tick2">Contact</a></li>
-                
-
             </ul>
             
         </div>

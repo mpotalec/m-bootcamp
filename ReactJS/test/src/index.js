@@ -8,15 +8,19 @@ import AppClass from './AppClass';
 import Tick from './Tick';
 import List from './List';
 import Tick2 from './Tick2';
+import Car from './Car';
+import Student from './Student';
+import Counter from './Counter';
 
 
 ReactDOM.render(
   <React.StrictMode>
+    <Counter />
     <AppClass />
     <AppFunction />
+    <Student />
     <Tick />
     <List/>
-    
     <App />
     <Tick2 />
   </React.StrictMode>,

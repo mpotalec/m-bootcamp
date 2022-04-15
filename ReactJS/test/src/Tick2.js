@@ -1,18 +1,15 @@
-import './App.css'
-import ReactDOM from 'react-dom';
+import './App.css';
+import {useState} from 'react';
 
+function Tick2(){
+  const [count, setCount] = useState(0)
 
-
-function AppFunction() {
-    
-  const element = (
-  <div class="secondTimer">
-      <h1>It is {new Date().toLocaleTimeString()}.</h1>
+return(
+  <div>
+    <p>You have clicked {count} times!</p>
+    <button onClick={()=>setCount(count + 1) }>Click</button>
   </div>
-  );
- return(element);
-  }
+)}
 
-  setInterval(AppFunction, 1000)
+export default Tick2;
 
-export default AppFunction;
